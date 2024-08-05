@@ -5,8 +5,8 @@
 #https://www.guru99.com/powershell-tutorial.html
 
 #Usage: Open Command Prompt cmd.exe from Windows + R then issue the command
-#powershell -File d:\endava.ps1
-#pwsh -File d:\endava.ps1
+#powershell -File d:\endekk.ps1
+#pwsh -File d:\endekk.ps1
 
 Write-Host "Welcome to DailyTools script"
 #Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
