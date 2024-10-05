@@ -5,13 +5,16 @@
 #https://www.guru99.com/powershell-tutorial.html
 
 #Usage: Open Command Prompt cmd.exe from Windows + R then issue the command
-#powershell -File d:\endekk.ps1
-#pwsh -File d:\endekk.ps1
+#powershell -File d:\tanth.ps1
+#pwsh -File d:\tanth.ps1
 
 Write-Host "Welcome to DailyTools script"
 #Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 #Get-ExecutionPolicy -Scope CurrentUser
 #Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Windows shortcut target
+#C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command "& C:\tanth.ps1" -NoLogo -NonInteractive -NoProfile
 
 $delay = 3
 
@@ -121,6 +124,7 @@ Start-Sleep -Seconds $delay
 #start microsoft-edge:https://chat.openai.com/
 start microsoft-edge:https://chatgpt.com/
 start microsoft-edge:https://rewards.bing.com/
+start microsoft-edge:https://www.perplexity.ai/
 
 
 
@@ -178,28 +182,10 @@ foreach ($folderPath in $folderPaths)
     else
     {
         # Open the folder in a new explorer window
-        Start-Process explorer.exe $folderPath
+        Start-Process explorer.exe $folderPath -WindowStyle Minimized
         #Write-Output "The folder '$folderPath' was not open. A new instance has been started."
     }
 }
-
-
-
-#$strava = "https://www.strava.com/athletes/"
-#$mems = @("123260906","123260547","105994911","114082233","64342908")
-#for ($i=0; $i -lt $mems.Length; $i++)
-#{
-#    $url = $strava+$mems[$i]
-#    [system.Diagnostics.Process]::Start("firefox", $url)
-	# Delay to re-order member page
-#	Start-Sleep -Seconds 2
-#    if ($i -eq 0)
-#    { 
-#		# Delay 1st page for next coming tabs
-#        Start-Sleep -Seconds 3
-#    }
-#}
-
 
 Write-Host "Quick! Check this before session closes!!"
 Start-Sleep -Seconds 5
